@@ -1,9 +1,9 @@
-class Subway {
-  Subway({
+class SubwayDto {
+  SubwayDto({
       this.errorMessage, 
       this.realtimeArrivalList,});
 
-  Subway.fromJson(dynamic json) {
+  SubwayDto.fromJson(dynamic json) {
     errorMessage = json['errorMessage'] != null ? ErrorMessage.fromJson(json['errorMessage']) : null;
     if (json['realtimeArrivalList'] != null) {
       realtimeArrivalList = [];

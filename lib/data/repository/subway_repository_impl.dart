@@ -1,4 +1,7 @@
 import '../data_source/subway_data_source.dart';
+
+import '../dto/subway_dto.dart';
+import '../model/subway.dart';
 import 'subway_repository.dart';
 
 class SubwayRepositoryImpl implements SubwayRepository {
@@ -12,10 +15,10 @@ class SubwayRepositoryImpl implements SubwayRepository {
   Future<List<Subway>> getPhotos(String query) async {
     final dto = await _subWayDataSource.getSubwayResult(query);
 
-    if (dto.hits == null) {
+    if (dto.realtimeArrivalList == null) {
       return [];
     }
 
-    return dto.hits!.map((e) => e.toPhoto()).toList();
+    return dto.realtimeArrivalList!.map((e) => e.toPhoto()).toList();
   }
 }
