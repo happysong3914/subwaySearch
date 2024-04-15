@@ -7,16 +7,12 @@ import 'package:subway_search/presentation/search_main.dart';
 import 'data/data_source/subway_data_source.dart';
 import 'data/repository/subway_repository_impl.dart';
 
-
-
-
-
 final router = GoRouter(
-  initialLocation: '/',
+  initialLocation: '/home',
   debugLogDiagnostics: true,
   routes: [
     GoRoute(
-      path: '/',
+      path: '/home',
       builder: (context, state) {
         return ChangeNotifierProvider(
           create: (_) => SearchListViewModel(
