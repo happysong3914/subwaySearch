@@ -25,8 +25,10 @@ class SearchMain extends StatelessWidget {
             icon: const Icon(Icons.search),
             onPressed: () async {
               final query = _queryTextEditingController.text;
-              viewModel.onSearch(query);
-              context.push('/result',extra: viewModel.state.subways);
+
+              await viewModel.onSearch(query);
+              print(viewModel.state.subways.toList().toString());
+              context.push('/result',extra: viewModel.state.subways.toList());
             },
           ),
         ),

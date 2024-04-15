@@ -12,7 +12,6 @@ class SubWayDataSource {
   Future<SubwayDto> getSubwayResult(String query) async {
     final response = await http.get(Uri.parse(
         '$_baseUrl/$query'));
-
     return SubwayDto.fromJson(jsonDecode(response.body));
   }
 }

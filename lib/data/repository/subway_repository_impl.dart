@@ -20,6 +20,7 @@ class SubwayRepositoryImpl implements SubwayRepository {
     if (dto.realtimeArrivalList == null) {
       return [];
     }
+    final test = dto.realtimeArrivalList!.map((e) => e.toSubway()).toList();
     return dto.realtimeArrivalList!.map((e) => e.toSubway()).toList();
   }
 }

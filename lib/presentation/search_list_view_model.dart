@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:subway_search/presentation/searchList_state.dart';
 
+
 import '../data/repository/subway_repository.dart';
 
 class SearchListViewModel with ChangeNotifier {
@@ -14,11 +15,11 @@ class SearchListViewModel with ChangeNotifier {
 
   SearchListState get state => _state;
 
-  void onSearch(String query) async {
+  Future<void> onSearch(String query) async {
     _state = state.copyWith(isLoading: true);
     notifyListeners();
 
-    _state = state.copyWith(
+    _state = await state.copyWith(
       subways: await _subwayRepository.getSubways(query),
       isLoading: false,
     );
