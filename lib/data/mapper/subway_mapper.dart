@@ -59,8 +59,6 @@ String subwayIdNameMatching(String value){
   }
 
   return '';
-
-  return '';
 }
 
 String arvlCdMatching (String value){

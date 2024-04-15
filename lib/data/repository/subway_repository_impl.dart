@@ -14,7 +14,7 @@ class SubwayRepositoryImpl implements SubwayRepository {
   }) : _subWayDataSource = subWayDataSource;
 
   @override
-  Future<List<Subway>> getPhotos(String query) async {
+  Future<List<Subway>> getSubways(String query) async {
     final dto = await _subWayDataSource.getSubwayResult(query);
 
     if (dto.realtimeArrivalList == null) {
