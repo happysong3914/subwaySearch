@@ -14,7 +14,7 @@ class SearchMain extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('text'),
+        title: Text('🚅 서울 지하철 정보'),
       ),
       body:TextField(
         controller: _queryTextEditingController,
