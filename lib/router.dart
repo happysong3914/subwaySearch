@@ -1,5 +1,6 @@
 import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
+import 'package:subway_search/data/model/subway.dart';
 import 'package:subway_search/presentation/result_main.dart';
 import 'package:subway_search/presentation/search_list_view_model.dart';
 import 'package:subway_search/presentation/search_main.dart';
@@ -27,7 +28,7 @@ final router = GoRouter(
     GoRoute(
       path: '/result',
       builder: (context, state) {
-        final resultList = state.extra as List;
+        final List<Subway> resultList = state.extra as List<Subway>;
         return ResultMain(subwayList: resultList,);
       },
     ),

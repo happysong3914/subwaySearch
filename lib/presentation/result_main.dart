@@ -1,13 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 import '../data/model/subway.dart';
 
 class ResultMain extends StatelessWidget {
-  List<Subway> subwayList =[];
-  ResultMain({super.key, required subwayList});
+  final List<Subway> subwayList;
+  ResultMain({super.key, required this.subwayList});
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      body: Text('''${subwayList.toString()}'''.trim()),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          context.pop();
+        },
+
+        child: Icon(Icons.arrow_back),
+      ),
+    );
   }
 }
