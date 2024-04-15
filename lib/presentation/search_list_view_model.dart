@@ -19,7 +19,7 @@ class SearchListViewModel with ChangeNotifier {
     notifyListeners();
 
     _state = state.copyWith(
-      photos: await _subwayRepository.getSubways(query),
+      subways: await _subwayRepository.getSubways(query),
       isLoading: false,
     );
     notifyListeners();

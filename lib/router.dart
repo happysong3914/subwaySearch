@@ -1,31 +1,38 @@
 import 'package:go_router/go_router.dart';
+import 'package:provider/provider.dart';
+import 'package:subway_search/presentation/result_main.dart';
+import 'package:subway_search/presentation/search_list_view_model.dart';
+import 'package:subway_search/presentation/search_main.dart';
 
-import 'data/core/change_notifier_provider.dart';
+import 'data/data_source/subway_data_source.dart';
+import 'data/repository/subway_repository_impl.dart';
+
+
 
 
 
 final router = GoRouter(
+  initialLocation: '/',
+  debugLogDiagnostics: true,
   routes: [
     GoRoute(
       path: '/',
       builder: (context, state) {
         return ChangeNotifierProvider(
-          value: CounterViewModel(
-            repository: CounterRepository(),
+          create: (_) => SearchListViewModel(
+              subwayRepository: SubwayRepositoryImpl(
+                  subWayDataSource: SubWayDataSource()
+              )
           ),
-          child: const CounterScreen(),
+            child: const SearchMain(),
         );
       },
     ),
     GoRoute(
-      path: '/next',
+      path: '/result',
       builder: (context, state) {
-        return ChangeNotifierProvider(
-          value: CounterViewModel(
-            repository: CounterRepository(),
-          ),
-          child: const NextScreen(),
-        );
+        final resultList = state.extra as List;
+        return ResultMain(subwayList: resultList,);
       },
     ),
   ],

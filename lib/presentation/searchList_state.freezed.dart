@@ -20,7 +20,7 @@ SearchListState _$SearchListStateFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$SearchListState {
-  List<Subway> get photos => throw _privateConstructorUsedError;
+  List<Subway> get subways => throw _privateConstructorUsedError;
   bool get isLoading => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -35,7 +35,7 @@ abstract class $SearchListStateCopyWith<$Res> {
           SearchListState value, $Res Function(SearchListState) then) =
       _$SearchListStateCopyWithImpl<$Res, SearchListState>;
   @useResult
-  $Res call({List<Subway> photos, bool isLoading});
+  $Res call({List<Subway> subways, bool isLoading});
 }
 
 /// @nodoc
@@ -51,13 +51,13 @@ class _$SearchListStateCopyWithImpl<$Res, $Val extends SearchListState>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? photos = null,
+    Object? subways = null,
     Object? isLoading = null,
   }) {
     return _then(_value.copyWith(
-      photos: null == photos
-          ? _value.photos
-          : photos // ignore: cast_nullable_to_non_nullable
+      subways: null == subways
+          ? _value.subways
+          : subways // ignore: cast_nullable_to_non_nullable
               as List<Subway>,
       isLoading: null == isLoading
           ? _value.isLoading
@@ -75,7 +75,7 @@ abstract class _$$SearchListStateImplCopyWith<$Res>
       __$$SearchListStateImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({List<Subway> photos, bool isLoading});
+  $Res call({List<Subway> subways, bool isLoading});
 }
 
 /// @nodoc
@@ -89,13 +89,13 @@ class __$$SearchListStateImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? photos = null,
+    Object? subways = null,
     Object? isLoading = null,
   }) {
     return _then(_$SearchListStateImpl(
-      photos: null == photos
-          ? _value._photos
-          : photos // ignore: cast_nullable_to_non_nullable
+      subways: null == subways
+          ? _value._subways
+          : subways // ignore: cast_nullable_to_non_nullable
               as List<Subway>,
       isLoading: null == isLoading
           ? _value.isLoading
@@ -109,19 +109,19 @@ class __$$SearchListStateImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$SearchListStateImpl implements _SearchListState {
   const _$SearchListStateImpl(
-      {final List<Subway> photos = const [], this.isLoading = false})
-      : _photos = photos;
+      {final List<Subway> subways = const [], this.isLoading = false})
+      : _subways = subways;
 
   factory _$SearchListStateImpl.fromJson(Map<String, dynamic> json) =>
       _$$SearchListStateImplFromJson(json);
 
-  final List<Subway> _photos;
+  final List<Subway> _subways;
   @override
   @JsonKey()
-  List<Subway> get photos {
-    if (_photos is EqualUnmodifiableListView) return _photos;
+  List<Subway> get subways {
+    if (_subways is EqualUnmodifiableListView) return _subways;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_photos);
+    return EqualUnmodifiableListView(_subways);
   }
 
   @override
@@ -130,7 +130,7 @@ class _$SearchListStateImpl implements _SearchListState {
 
   @override
   String toString() {
-    return 'SearchListState(photos: $photos, isLoading: $isLoading)';
+    return 'SearchListState(subways: $subways, isLoading: $isLoading)';
   }
 
   @override
@@ -138,7 +138,7 @@ class _$SearchListStateImpl implements _SearchListState {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SearchListStateImpl &&
-            const DeepCollectionEquality().equals(other._photos, _photos) &&
+            const DeepCollectionEquality().equals(other._subways, _subways) &&
             (identical(other.isLoading, isLoading) ||
                 other.isLoading == isLoading));
   }
@@ -146,7 +146,7 @@ class _$SearchListStateImpl implements _SearchListState {
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(_photos), isLoading);
+      runtimeType, const DeepCollectionEquality().hash(_subways), isLoading);
 
   @JsonKey(ignore: true)
   @override
@@ -165,14 +165,14 @@ class _$SearchListStateImpl implements _SearchListState {
 
 abstract class _SearchListState implements SearchListState {
   const factory _SearchListState(
-      {final List<Subway> photos,
+      {final List<Subway> subways,
       final bool isLoading}) = _$SearchListStateImpl;
 
   factory _SearchListState.fromJson(Map<String, dynamic> json) =
       _$SearchListStateImpl.fromJson;
 
   @override
-  List<Subway> get photos;
+  List<Subway> get subways;
   @override
   bool get isLoading;
   @override

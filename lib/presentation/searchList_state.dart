@@ -8,7 +8,7 @@ part 'searchList_state.g.dart';
 @freezed
 class SearchListState with _$SearchListState {
   const factory SearchListState({
-    @Default([]) List<Subway> photos,
+    @Default([]) List<Subway> subways,
     @Default(false) bool isLoading,
   }) = _SearchListState;
   

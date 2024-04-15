@@ -9,7 +9,7 @@ part of 'searchList_state.dart';
 _$SearchListStateImpl _$$SearchListStateImplFromJson(
         Map<String, dynamic> json) =>
     _$SearchListStateImpl(
-      photos: (json['photos'] as List<dynamic>?)
+      subways: (json['subways'] as List<dynamic>?)
               ?.map((e) => Subway.fromJson(e as Map<String, dynamic>))
               .toList() ??
           const [],
@@ -19,6 +19,6 @@ _$SearchListStateImpl _$$SearchListStateImplFromJson(
 Map<String, dynamic> _$$SearchListStateImplToJson(
         _$SearchListStateImpl instance) =>
     <String, dynamic>{
-      'photos': instance.photos,
+      'subways': instance.subways,
       'isLoading': instance.isLoading,
     };
