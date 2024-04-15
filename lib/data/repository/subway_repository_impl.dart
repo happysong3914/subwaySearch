@@ -1,3 +1,5 @@
+import 'package:subway_search/data/mapper/subway_mapper.dart';
+
 import '../data_source/subway_data_source.dart';
 
 import '../dto/subway_dto.dart';
@@ -18,7 +20,6 @@ class SubwayRepositoryImpl implements SubwayRepository {
     if (dto.realtimeArrivalList == null) {
       return [];
     }
-
-    return dto.realtimeArrivalList!.map((e) => e.toPhoto()).toList();
+    return dto.realtimeArrivalList!.map((e) => e.toSubway()).toList();
   }
 }
